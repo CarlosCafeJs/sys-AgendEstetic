@@ -13,20 +13,20 @@ import Grid from '@mui/material/Grid';
 import { ROUTES } from '@/routes';
 
 const NAVIGATION: Navigation = [
-  { kind: 'header', title: 'Main items' },
-
+  { kind: 'header', title: 'Sistema' },
+  { segment: 'calendar', title: 'Calendario', icon: "" },
   { kind: 'divider' },
   { kind: 'header', title: 'Analytics' },
   {
     segment: '/register',
-    title: 'Registros',
-    icon: <BarChartIcon />,
+    title: 'Clientes',
+    icon: "",
     children: [
-      { segment: 'register-client', title: 'Cadastrar Cliente', icon: <DashboardIcon /> },
-      { segment: 'register-client-details', title: 'Cadastro Detalhes', icon: <ShoppingCartIcon /> },
+      { segment: 'register-client', title: 'Cadastrar Cliente', icon: "" },
+      { segment: 'register-client-details', title: 'Cadastro Detalhes', icon: "" },
     ],
   },
-  { segment: 'integrations', title: 'Integrações', icon: <LayersIcon /> },
+  { segment: 'integrations', title: 'Integrações', icon: "" },
 ];
 
 const demoTheme = createTheme({
@@ -43,6 +43,7 @@ const demoTheme = createTheme({
       xl: 1536,
     },
   },
+
 });
 
 function useSideRouter(initialPath: string): Router {
@@ -77,6 +78,11 @@ export default function SideBarClinic(props: any) {
   return (
     <AppProvider
       navigation={NAVIGATION}
+      branding={{
+        logo: <img src="" alt="Sistema de Clinica" />,
+        title: '',
+        homeUrl: '',
+      }}
       router={router}
       theme={demoTheme}
 
