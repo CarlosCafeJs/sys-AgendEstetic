@@ -25,10 +25,10 @@ const rows = [
 ];
 
 
-const RegisterDetails = () => {
+const RegisterClient = () => {
   const [value, setValue] = useState<Date | null>(null);
   const [phone, setPhone] = useState('');
-  const telInputMask = useMask({ mask: '(__)_____-____', replacement: { _: /\d/ } });
+  const telInputMask = useMask({ mask: '(__) _____-____', replacement: { _: /\d/ } });
   const cpfInputMaks = useMask({ mask: '___.___.___-__', replacement: { _: /\d/ } });
   const cepInputMaks = useMask({ mask: '_____-___', replacement: { _: /\d/ } });
   const emailInputMask = useMask({ mask: '', replacement: '_' });
@@ -77,4 +77,4 @@ const RegisterDetails = () => {
   )
 }
 
-export default RegisterDetails;
+export default RegisterClient;
